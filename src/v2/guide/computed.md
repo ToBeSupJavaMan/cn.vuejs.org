@@ -115,7 +115,11 @@ computed: {
 Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：**侦听属性**。当你有一些数据需要随着其它数据变动而变动时，你很容易滥用 `watch`——特别是如果你之前使用过 AngularJS。然而，通常更好的做法是使用计算属性而不是命令式的 `watch` 回调。细想一下这个例子：
 
 ``` html
-<div id="demo">{{ fullName }}</div>
+<div id="demo">
+ firstName:<input v-model="firstName"></input> 
+  lastName:<input v-model="lastName"></input>
+  fullName:<input v-model="fullName"></input>
+</div>
 ```
 
 ``` js
